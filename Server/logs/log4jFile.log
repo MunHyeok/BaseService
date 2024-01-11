@@ -1,0 +1,8 @@
+2024-01-11 21:59:41,156 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:139) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-11 21:59:41,168 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:208) - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-01-11 21:59:41,424 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(initialize:109) - Tomcat initialized with port 8080 (http)
+2024-01-11 21:59:41,463 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext(prepareWebApplicationContext:296) - Root WebApplicationContext: initialization completed in 615 ms
+2024-01-11 21:59:41,747 [main] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo(addTransformer:87) - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-11 21:59:42,088 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean(buildNativeEntityManagerFactory:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-11 21:59:42,110 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration(openEntityManagerInViewInterceptor:232) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-11 21:59:42,306 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(start:241) - Tomcat started on port 8080 (http) with context path ''
