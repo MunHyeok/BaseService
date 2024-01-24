@@ -7,12 +7,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Entity
 @Getter
 @Setter
 @Table(name = "users")
-public class UserEntity {
+public class UserEntity implements IEntityClone {
 
     @Builder
     public UserEntity(Long id, String userID, String username, String email, String password, boolean enabled, LocalDateTime registrationDate, String phoneNumber) {
@@ -24,6 +25,8 @@ public class UserEntity {
         this.enabled = enabled;
         this.registrationDate = registrationDate;
         this.phoneNumber = phoneNumber;
+
+
     }
 
     @Id
@@ -31,7 +34,7 @@ public class UserEntity {
     @Column(name = "no")
     private Long id;
 
-    @Column(name = "userID", unique = true, nullable = false)
+    @Column(name = "userid", unique = true, nullable = false)
     private String userID;
 
     @Column(name = "username", unique = true, nullable = false)
@@ -54,6 +57,21 @@ public class UserEntity {
 
     public UserEntity() {
 
+    }
+
+    @Override
+    public void CopyFrom(Object o) {
+        if(o instanceof UserEntity entity)
+        {
+            this.userID             = entity.userID;
+            this.username           = entity.username;
+            this.email              = entity.email;
+            this.password           = entity.password;
+            this.enabled            = entity.enabled;
+            this.registrationDate   = LocalDateTime.now();
+            this.phoneNumber        = entity.phoneNumber;
+
+        }
     }
 
 

@@ -11,19 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Log4j2
 @SpringBootApplication
 public class ServerApplication {
-	@Autowired
-	static UserRepository repoTest;
 
 	public static void main(String[] args)
 	{
 		SpringApplication.run(ServerApplication.class, args);
-		repoTest.save(UserEntity
-				.builder()
-				.userID("test")
-				.email("test@test.com")
-				.password("test")
-				.phoneNumber("010-1234-1234")
-				.build());
-
 	}
 }
